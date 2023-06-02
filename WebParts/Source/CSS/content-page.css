@@ -1,0 +1,182 @@
+#photo-container {
+  width: 800px;
+  height: 800px;
+  background-color: white;
+  margin-bottom: 20px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 800px);
+  justify-items: center;
+}
+
+#buttons-container {
+  margin-top: 10px;
+  grid-column: 2;
+  grid-row: 3 / 4;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.btn {
+  display: grid;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 50px;
+  transition: height 0.5s ease;
+  margin: 10px;
+  position: relative;
+  overflow: visible;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(3, 33.33%);
+  justify-items: center;
+  border-radius: 10px;
+  width: 60%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  font-family: 'Bebas Neue', sans-serif;
+
+}
+
+.btn-select {
+  color: transparent;
+  grid-column: 3/3;
+  grid-row: 2;
+  transition: color 0.5s ease;
+}
+
+.btn-selected {
+  color: transparent;
+  grid-column: 3/3;
+  grid-row: 2;
+  transition: color 0.5s ease;
+}
+
+.btn-selected-hover {
+  color: transparent;
+  transition: color 0.5s ease;
+}
+
+.btn-select-hover {
+  color: transparent;
+  transition: color 0.5s ease;
+}
+
+.btn-color-change {
+
+  background-color: rgba(160, 253, 172, 0.5);
+
+}
+
+.btn-color-fixx {
+  background-color: rgba(58, 255, 84, 0.5)
+}
+
+.has-text {
+  position: relative;
+  margin-top: 10px;
+  grid-column: 1/4;
+  grid-row: 1;
+}
+
+.list-description {
+  list-style-type: none;
+  opacity: 0;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+}
+
+.list-description li {
+  position: relative;
+  padding-left: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.list-description li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-image: url("../icon-navbar/dot.png");
+  background-size: cover;
+}
+
+.btn:hover .description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn:hover .list-description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn:hover .btn-color-change {
+  transition: background-color 0.5s ease;
+}
+
+.description {
+  position: absolute;
+  top: 10%;
+  height: auto;
+  background-color: transparent;
+  padding: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  grid-column: 1/3;
+  grid-row: 1/3;
+  left: 0;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.description-text {
+  top: 50%;
+  padding-left: 40px;
+}
+
+#back-button {
+  grid-column: 1;
+  grid-row: 6;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  height: 50px;
+}
+
+#next-button {
+  grid-column: 2;
+  grid-row: 6;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  height: 50px;
+  width: 50px;
+  transition: color 0.5s ease;
+}
+
+#next-button:hover {
+  color: green;
+  transition: color 0.5s ease;
+}
