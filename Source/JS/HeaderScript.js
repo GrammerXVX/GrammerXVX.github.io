@@ -9,7 +9,23 @@ document.querySelector('.hamburger-menu').addEventListener('click', function () 
   })
 })();
 
-let timeoutId=0;
+let timeoutId;
+
+const menuLinks = document.querySelectorAll('.menu a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Закрытие меню
+    document.querySelector('.menu').style.transform = 'translateX(-100%)';
+    // Удаление класса 'open' у гамбургер-меню
+    document.querySelector('.hamburger-menu').classList.remove('open');
+    // Удаление класса 'animate' у баров гамбургер-меню
+    document.querySelectorAll('.bar').forEach(bar => {
+      bar.classList.remove('animate');
+    });
+  });
+});
+
 
 function expandHeader() {
   clearTimeout(timeoutId);
