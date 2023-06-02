@@ -9,7 +9,7 @@ document.querySelector('.hamburger-menu').addEventListener('click', function () 
   })
 })();
 
-let timeoutId;
+let timeoutId=0;
 
 function expandHeader() {
   clearTimeout(timeoutId);
