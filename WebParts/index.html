@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Конструктор доильного зала</title>
+  <link rel="stylesheet" href="Source/CSS/style.css" />
+  <link rel="stylesheet" href="Source/CSS/burger-style.css" />
+  <link rel="stylesheet" href="Source/CSS/content-page.css" />
+  
+</head>
+
+<body class="background-image" background="cow.jpg">
+  <!--Header begin-->
+  <header>
+    <a href="https://polyefir-agro.by/">
+      <img src="Source/Logo/logo.svg" alt="Полиэфир АГРО" class="logo" />
+    </a>
+    <div class="struct-menu">
+      <div class="struct-menu-item" onmouseover="expandHeader()" onmouseout="shrinkHeader()" onclick="loadPage('generatePage.html','УДЕ')">
+        <span >УДЕ</span>
+        <div class="struct-submenu-item">
+          <img src="Source/Image/YDE.jpg" alt="Изображение 1">
+          <p>Хороший доступ к животному. Удобство использования.</p>
+        </div>
+      </div>
+      <div class="struct-menu-item" onmouseover="expandHeader()" onmouseout="shrinkHeader()" onclick="loadPage('generatePage.html','УДП')">
+        <span>УДП</span>
+        <div class="struct-submenu-item">
+          <img src="Source/Image/YDP.jpg" alt="Изображение 2">
+          <p>Компактные размеры.Хорошая гигиена в зале.</p>
+        </div>
+      </div>
+      <div class="struct-menu-item" onmouseover="expandHeader()" onmouseout="shrinkHeader()" onclick="loadPage('generatePage.html','Тандем')">
+        <span>Тандем</span>
+        <div class="struct-submenu-item">
+          <img src="Source/Image/Tandem.jpg" alt="Изображение 3">
+          <p>Оптимальный вариант для небольших ферм</p>
+        </div>
+      </div>
+      <div class="struct-menu-item" onmouseover="expandHeader()" onmouseout="shrinkHeader()" onclick="loadPage('none.html','Карусель')">
+        <span>Карусель</span>
+        <div class="struct-submenu-item-none">
+          <img src="Source/Image/Karysel.jpg" alt="Изображение 4">
+          <p>Недоступно</p>
+        </div>
+      </div>
+      <div class="struct-menu-item" onmouseover="expandHeader()" onmouseout="shrinkHeader()" onclick="loadPage('none.html','Робот')">
+        <span>Робот</span>
+        <div class="struct-submenu-item-none">
+          <img src="Source/Image/Robot.jpg" alt="Изображение 5">
+          <p>Недоступно</p>
+        </div>
+      </div>
+    </div>
+    <div class="hamburger-menu">
+      <div class="bar"></div>
+    </div>
+    
+  </header>
+  <nav class="menu">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Услуги</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+  <!--Header end-->
+
+  <!--Content begin-->
+  <div id="content-container">
+  </div>
+  <!--Content end-->
+
+  <!--Scripts-->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="Source/JS/HeaderScript.js"></script>
+  
+  <script src="Source/JS/conrolPageAPI.js"></script>
+</body>
+
+</html>
